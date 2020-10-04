@@ -15,6 +15,7 @@ var solveNQueens = function (n) {
   function find(nq, i) {
     if (i < 1) {
       res.push(nq.slice());
+      return;
     }
 
     for (let col = 0; col < n; col++) {
@@ -34,6 +35,8 @@ var solveNQueens = function (n) {
         diag2.pop();
       }
     }
+
+    return;
   }
 
   function genRow(index) {
